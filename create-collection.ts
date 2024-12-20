@@ -26,11 +26,14 @@ console.log("Set up Umi isntance for user")
 
 const collectionMint = generateSigner(umi)
 
+console.log("Collection Mint: ", collectionMint)
+
 const transaction = createNft(umi, {
   mint: collectionMint,
   name: "My Collection",
   symbol: "MC",
   // This URI is a JSON file which is directly accessible from anywhere
+  // Suggested to use web3 approach for Uploaded instances making sure that it never is deleted
   uri: "https://raw.githubusercontent.com/prashant1k99/solana-nft/refs/heads/main/data/sample-nft-collection-offchain-data.json",
   // To allow artists to make money on secondary sales (Resales | Royalties)
   sellerFeeBasisPoints: percentAmount(0),
@@ -51,4 +54,4 @@ console.log(
     "devnet"
   )}`
 )
-
+// https://explorer.solana.com/address/81Z9vBnWB9E6Xkf8bgJ8Uj4tisZs1RJFa9QqumnoqUrN?cluster=devnet
