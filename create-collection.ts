@@ -31,7 +31,7 @@ const transaction = createNft(umi, {
   name: "My Collection",
   symbol: "MC",
   // This URI is a JSON file which is directly accessible from anywhere
-  uri: "https://github.com/prashant1k99",
+  uri: "https://raw.githubusercontent.com/prashant1k99/solana-nft/refs/heads/main/data/sample-nft-collection-offchain-data.json",
   // To allow artists to make money on secondary sales (Resales | Royalties)
   sellerFeeBasisPoints: percentAmount(0),
   isCollection: true,
